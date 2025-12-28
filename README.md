@@ -1,2 +1,3 @@
 # bookbot
-Python Bookbot - An automateed report of the word and character usage found in your library.
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
