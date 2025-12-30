@@ -9,12 +9,15 @@ def main():
     string = get_book_text()
     total_words = get_num_words(string)
     count_chars = get_char_count(string)
+    char_sort = sort_chars(count_chars)
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
     print(f"Found {total_words} total words")
     print("--------- Character Count -------")
     
-    # sort_chars(count_chars)
+    for item in char_sort:
+        print(f"{item['char']}: {item['num']}")
+
     print("============= END ===============")
 main()

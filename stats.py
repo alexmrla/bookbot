@@ -13,7 +13,15 @@ def get_char_count(string):
             char_counter[char] += 1
     return char_counter
 
+def sort_on(items):
+    return items["num"]
+
+
 def sort_chars(count_chars):
-    char_counter = count_chars
-    # for char in char_counter:
-    #     print(char)
+    split_counts = []
+    for char in count_chars:
+        if char.isalpha():
+            split_counts.append({"char": char, "num": count_chars[char]})
+    #print(f"Split Counts: {split_counts}")
+    split_counts.sort(reverse=True, key=sort_on)
+    return split_counts
